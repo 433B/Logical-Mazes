@@ -1,0 +1,22 @@
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+
+    remote:
+      server:
+        api=http://localhost:8080/api/:
+
+spring:
+  datasource:
+    password: tornado6919
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
